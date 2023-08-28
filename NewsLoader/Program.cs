@@ -22,7 +22,6 @@ var serviceProvider = new ServiceCollection()
 
 
 var apiReader = serviceProvider.GetRequiredService <ApiReader>();
-//List<MimResponse> siteNews = await apiReader.GetNews();
 List<MimStoreDto> siteNews = apiReader.GetStores();
 
 

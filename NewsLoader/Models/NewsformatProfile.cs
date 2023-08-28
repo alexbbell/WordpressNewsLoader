@@ -11,8 +11,8 @@ namespace NewsLoader.Models
     {
         public NewsformatProfile() 
         {
-            CreateMap<MimResponse, MimStoreDto>()
-                .ForMember(x=>x.title, opt => opt.MapFrom(src => src.title.rendered))
+            _ = CreateMap<MimResponse, MimStoreDto>()
+                .ForMember(x => x.title, opt => opt.MapFrom(src => src.title.rendered))
                 .ForMember(x => x.excerpt, opt => opt.MapFrom(src => src.excerpt.rendered));
         }
     }
