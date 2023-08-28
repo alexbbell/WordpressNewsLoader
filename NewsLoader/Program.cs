@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NewsLoader;
@@ -16,19 +17,21 @@ var serviceProvider = new ServiceCollection()
       .AddScoped<MyLogger>()
       .AddSingleton<IConfiguration>(config)
       .AddScoped<ApiReader>()
+      .AddAutoMapper(typeof(NewsformatProfile))
       .BuildServiceProvider();
 
 
 var apiReader = serviceProvider.GetRequiredService <ApiReader>();
-List<MimResponse> siteNews = await apiReader.GetNews();
-
+//List<MimResponse> siteNews = await apiReader.GetNews();
+List<MimStoreDto> siteNews = apiReader.GetStores();
 
 
 
 if (siteNews.Count > 0)
 {
     var myService = serviceProvider.GetRequiredService<FileSaver>();
-    string text = Newtonsoft.Json.JsonConvert.SerializeObject(siteNews);
+
+    string text = Newtonsoft.Json.JsonConvert.SerializeObject(siteNews, Newtonsoft.Json.Formatting.Indented);
     _ = myService.SaveNewsFile(text);
 
 }
