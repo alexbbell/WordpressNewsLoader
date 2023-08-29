@@ -1,15 +1,10 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NewsLoader.Models
 {
-    public class NewsformatProfile: Profile
+    public class NewsformatProfile : Profile
     {
-        public NewsformatProfile() 
+        public NewsformatProfile()
         {
             _ = CreateMap<MimResponse, MimStoreDto>()
                 .ForMember(x => x.title, opt => opt.MapFrom(src => src.title.rendered))

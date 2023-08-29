@@ -19,8 +19,22 @@ The example of the result JSON
     "excerpt": "<p>I will write down the useful method. I used it several times and it works good. It&#8217;s C# method to create a UNC directory recursively and return the path.</p>\n"
   }
   ]
-
 ```
+
+in the 'datasource.json' file you can set multiple resources for downloading the content and filenames to store the data respectively.
+```json
+ [
+    {
+      "Url": "https://markimarta.com/wp-json/wp/v2/posts",
+      "StorePath": "c:\\Temp\\mimnews.json"
+    },
+    {
+      "Url": "https://markimarta.ru/wp-json/wp/v2/posts",
+      "StorePath": "c:\\Temp\\mimrunews.json"
+    }
+  ]
+```
+
 
 ## Prerequisites
 - AutoMapper 12.0.1
@@ -46,6 +60,7 @@ The example of the result JSON
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
+| 1.2     | August 29, 2023  | Multiple load   |
 | 1.1     | August 28, 2023  | JSON simplified |
 | 1.0     | August 25, 2023  | Initial release |
 

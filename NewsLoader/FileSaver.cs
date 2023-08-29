@@ -1,24 +1,18 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.IO;
-namespace NewsLoader
+﻿namespace NewsLoader
 {
     public class FileSaver
     {
         private readonly MyLogger _myLogger;
-        private readonly IConfiguration _configuration;
-
-        public FileSaver(MyLogger myLogger, IConfiguration configuration)
+        public FileSaver(MyLogger myLogger)
         {
             _myLogger = myLogger;
-            _configuration = configuration;
         }
-        public Task SaveNewsFile(string data)
+        public Task SaveNewsFile(string filePath, string data)
         {
             try
             {
-                string filePath = _configuration.GetSection("newsStorage").Value;
-                File.WriteAllText(path: filePath, data);
-                _myLogger.Logger.Info($"file is updated");
+                File.WriteAllText(filePath, data);
+                _myLogger.Logger.Info($"file '{filePath}' is updated");
             }
             catch (Exception ex)
             {

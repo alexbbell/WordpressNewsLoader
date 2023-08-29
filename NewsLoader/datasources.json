@@ -1,0 +1,10 @@
+ [
+    {
+      "Url": "https://markimarta.com/wp-json/wp/v2/posts",
+      "StorePath": "c:\\Temp\\mimnews.json"
+    },
+    {
+      "Url": "https://markimarta.ru/wp-json/wp/v2/posts",
+      "StorePath": "c:\\Temp\\mimrunews.json"
+    }
+  ]

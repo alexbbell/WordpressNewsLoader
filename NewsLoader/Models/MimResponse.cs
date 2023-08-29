@@ -15,7 +15,7 @@
     }
 
 
-    public class MimStoreDto 
+    public class MimStoreDto
     {
         public int id { get; set; }
         public DateTime date { get; set; }
