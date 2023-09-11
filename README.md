@@ -58,11 +58,12 @@ in the 'datasource.json' file you can set multiple resources for downloading the
 
 ## Version history
 
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.2     | August 29, 2023  | Multiple load   |
-| 1.1     | August 28, 2023  | JSON simplified |
-| 1.0     | August 25, 2023  | Initial release |
+| Version | Date                | Comments          |
+| ------- | ------------------- | ----------------- |
+| 1.2.1   | September 11, 2023  | Dev / prod config |
+| 1.2     | August 29, 2023     | Multiple load     |
+| 1.1     | August 28, 2023     | JSON simplified   |
+| 1.0     | August 25, 2023     | Initial release   |
 
 
 ## Minimal Path to Awesome

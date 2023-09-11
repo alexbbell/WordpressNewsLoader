@@ -4,9 +4,18 @@ using NewsLoader;
 using NewsLoader.Models;
 
 
+
+
+var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+Boolean isDevelopment = environment == "Development";
+Console.WriteLine($"isDevelopment: {isDevelopment}");
+
+string configFile = (isDevelopment) ? "appsettings.dev.json" : "appsettings.json";
+
 var configuration = new ConfigurationBuilder()
      //.SetBasePath(Directory.GetCurrentDirectory())
-     .AddJsonFile($"appsettings.json");
+     .AddJsonFile(configFile);
+
 var config = configuration.Build();
 var serviceProvider = new ServiceCollection()
       .AddSingleton<FileSaver>()
