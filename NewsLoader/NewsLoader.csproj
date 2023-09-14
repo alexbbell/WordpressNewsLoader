@@ -5,6 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>The console utility to load the previews of the last news from the Wordpress sites. It makes requests to a WordPress site and saves the data in the JSON file. </Description>
   </PropertyGroup>
 
   <ItemGroup>

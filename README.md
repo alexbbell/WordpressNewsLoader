@@ -2,7 +2,7 @@
 
 ## Summary
 
-Console utility to load the previews of the last news from the Wordpress sites. It makes requests to a WordPress site and saves the data in the JSON file. 
+The console utility to load the previews of the last news from the Wordpress sites. It makes requests to a WordPress site and saves the data in the JSON file. 
 
 It's good to use if you want to show the previews of the news on external site or if you just want to decrease the quantity of the API or DB Requests.
 
@@ -60,6 +60,7 @@ in the 'datasource.json' file you can set multiple resources for downloading the
 
 | Version | Date                | Comments          |
 | ------- | ------------------- | ----------------- |
+| 1.2.2   | September 14, 2023  | Full Url added    |
 | 1.2.1   | September 11, 2023  | Dev / prod config |
 | 1.2     | August 29, 2023     | Multiple load     |
 | 1.1     | August 28, 2023     | JSON simplified   |
