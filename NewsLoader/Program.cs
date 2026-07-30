@@ -22,7 +22,6 @@ var serviceProvider = new ServiceCollection()
       .AddScoped<MyLogger>()
       .AddSingleton<IConfiguration>(config)
       .AddScoped<ApiReader>()
-      .AddAutoMapper(typeof(NewsformatProfile))
       .BuildServiceProvider();
 
 
@@ -35,7 +34,7 @@ string jsonContent = File.ReadAllText(jsonFilePath);
 List<SourceConfig> jsonObject = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SourceConfig>>(value: jsonContent);
 foreach (var remoteUrl in jsonObject)
 {
-    List<MimStoreDto> siteNews = apiReader.GetStores(remoteUrl.Url);
+    List<MimStoreDto> siteNews = await apiReader.GetStores(remoteUrl.Url);
     if (siteNews.Count > 0)
     {
         var myService = serviceProvider.GetRequiredService<FileSaver>();

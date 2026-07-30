@@ -1,10 +1,10 @@
  [
     {
-      "Url": "https://markimarta.com/wp-json/wp/v2/posts",
+      "Url": "https://realdevtips.com/wp-json/wp/v2/posts?lang=en",
       "StorePath": "c:\\Temp\\mimnews.json"
     },
-    {
-      "Url": "https://markimarta.ru/wp-json/wp/v2/posts",
-      "StorePath": "c:\\Temp\\mimrunews.json"
-    }
+  {
+    "Url": "https://realdevtips.com/wp-json/wp/v2/posts?lang=ru",
+    "StorePath": "c:\\Temp\\mimrunews.json"
+  }
   ]
