@@ -37,13 +37,13 @@ in the 'datasource.json' file you can set multiple resources for downloading the
 
 
 ## Prerequisites
-- Microsoft.NETCore.App 8
-- Microsoft.Extensions.Configuration 10.0.10
-- Microsoft.Extensions.Configuration.Json 10.0.10
-- Microsoft.Extensions.DependencyInjection 10.0.10
-- NLog 6.1.4
-- Newtonsoft.Json 13.0.3
-- RestSharp 114.0.0
+- Microsoft.NETCore.App 10
+- Microsoft.Extensions.Configuration 10.0.14
+- Microsoft.Extensions.Configuration.Json 10.0.14
+- Microsoft.Extensions.DependencyInjection 10.0.14
+- NLog 6.2.2
+- Newtonsoft.Json 13.0.4
+- RestSharp 114.1.0
 
 
 ## Solution
@@ -58,6 +58,7 @@ in the 'datasource.json' file you can set multiple resources for downloading the
 
 | Version | Date                | Comments          |
 | ------- | ------------------- | ----------------- |
+| 1.2.5   | October 25, 2026    | updated to Net 10 |
 | 1.2.4   | July 30, 2026    | updated packages, removed AutoMapper |
 | 1.2.3   | Februar 05, 2025    | build for net 8, updated dependencies   |
 | 1.2.2   | September 14, 2023  | Full Url added    |
